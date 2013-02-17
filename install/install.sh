@@ -1,7 +1,7 @@
 #!/bin/bash
 
 basedir=$HOME/Projects/dotfiles/
-installdir=$HOME/tes/
+installdir=$HOME/
 timestamp=$(date +%s)
 tempdir=$HOME/dotfiles$timestamp
 gitrepo=git://github.com/mgechev/dotfiles.git
