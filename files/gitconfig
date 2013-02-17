@@ -1,0 +1,9 @@
+[user]
+	name = Minko Gechev
+	email = mgechev@gmail.com
+[core]
+	excludefile = /home/mgechev/.gitignore
+	excludesfile = /home/mgechev/.gitignore
+	editor = vim
+[push]
+	default = simple
