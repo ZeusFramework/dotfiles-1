@@ -12,6 +12,8 @@ set expandtab
 set number
 "Shows the found search results
 set showmatch
+"Shows 256 colors
+set t_Co=256
 "Shows the current line (where is the cursor at the moment)
 set cursorline
 "Highlights the current line in a better way
@@ -77,3 +79,5 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 "Starts NERDTree
 autocmd VimEnter * NERDTree
+"Minimal UI for NERDTree
+let NERDTreeMinimalUI=1
