@@ -1,5 +1,7 @@
 "Sets nice colorscheme
 colorscheme slate
+"Associate *.md with markdown filetype
+au BufRead,BufNewFile *.md setf markdown
 "Starts the syntax
 syntax on
 "Sets smart indent
@@ -28,6 +30,11 @@ set ruler
 set showmode
 "Shows the current file at the title bar
 set title
+"Sets better color for search highlight
+hi Search cterm=NONE ctermfg=NONE ctermbg=0x00ff00
+"Setting spell checking on markdown and text files
+au BufRead,BufNewFile *.md set spell
+au BufRead,BufNewFile *.txt set spell
 
 "Strips trailing whitespace
 function! StripWhitespace()
@@ -72,7 +79,6 @@ endif
 autocmd VimEnter * NERDTree
 "Minimal UI for NERDTree
 let NERDTreeMinimalUI=1
-
 "Toggles the NerdTree
 nnoremap <F5> :NERDTreeToggle<CR>
 
@@ -80,7 +86,13 @@ nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
-" Launches neocomplcache automatically on vim startup.
+"Crating and closing tabs
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-e> :tabclose<CR>
+
+"Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+"Launches neocomplcache automatically on vim startup.
 let g:neocomplcache_enable_at_startup = 1
 "Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
@@ -97,24 +109,18 @@ smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
-" SuperTab like snippets behavior.
-" imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
+"Recommended key-mappings.
+"<CR>: close popup and save indent.
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
+"<TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+"<C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
-"AutoComplPop like behavior.
-let g:neocomplcache_enable_auto_select = 1
-
-" Enable omni completion. 
+"Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
