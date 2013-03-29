@@ -116,7 +116,7 @@ export TERM=xterm-256color
 EDITOR=/usr/bin/vim
 export EDITOR=/usr/bin/vim
 
-
+# Sets appropriate colors using "tput"
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
   c_reset=$(tput sgr0)
   c_prefix=$(tput setaf 246)
@@ -129,6 +129,7 @@ else
   c_git_dirty=
 fi
 
+# Checks the current branch and also whether there are uncommited files
 git_prompt()
 {
   if ! git rev-parse --git-dir > /dev/null 2>&1; then
@@ -147,4 +148,5 @@ git_prompt()
   fi
 }
 
+# Sets the output
 PS1='\[$c_prefix\]\u:\w\[$c_reset\]\[$(git_prompt)\]\[$c_prefix\]\$\[$c_reset\] ' ;
