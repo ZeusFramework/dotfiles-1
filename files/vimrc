@@ -31,7 +31,7 @@ set showmode
 "Shows the current file at the title bar
 set title
 "Sets better color for search highlight
-hi Search cterm=NONE ctermfg=NONE ctermbg=0x00ff00
+hi Search cterm=NONE ctermfg=NONE ctermbg=DarkBlue
 "Setting spell checking on markdown and text files
 au BufRead,BufNewFile *.md set spell
 au BufRead,BufNewFile *.txt set spell
