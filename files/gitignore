@@ -16,9 +16,4 @@ node_modules
 
 .svn/
 
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+.sass-cache
