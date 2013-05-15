@@ -129,5 +129,6 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 call pathogen#infect()
 
+"NERDTree auto open with each new tab
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
