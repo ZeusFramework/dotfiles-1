@@ -128,3 +128,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 call pathogen#infect()
+
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
