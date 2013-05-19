@@ -116,7 +116,6 @@ export TERM=xterm-256color
 EDITOR=/usr/bin/vim
 export EDITOR=/usr/bin/vim
 
-#TODO this is still a bit buggy, should fix it
 #Sets appropriate colors using "tput"
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
   c_reset=$(tput sgr0)
@@ -151,3 +150,7 @@ git_prompt()
 
 #Sets the output
 PS1='\[$c_prefix\]\u:\w\[$c_reset\]\[$(git_prompt)\]\[$c_prefix\]\$\[$c_reset\] ' ;
+
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
