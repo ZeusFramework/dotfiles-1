@@ -150,7 +150,3 @@ git_prompt()
 
 #Sets the output
 PS1='\[$c_prefix\]\u:\w\[$c_reset\]\[$(git_prompt)\]\[$c_prefix\]\$\[$c_reset\] ' ;
-
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
