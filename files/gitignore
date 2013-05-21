@@ -11,6 +11,8 @@ node_modules
 *.vi
 ._*
 
+tags
+
 .classpath
 .project
 
