@@ -62,7 +62,6 @@ imap <right> <nop>
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
-"call pathogen#infect()
 set guioptions-=T
 set guioptions-=r
 set guioptions-=m
@@ -129,6 +128,9 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 call pathogen#infect()
 
-"NERDTree auto open with each new tab
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
+
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : 'jsctags'
+\ }
