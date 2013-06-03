@@ -144,3 +144,4 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-x> :call NumberToggle()<cr>
+silent !stty -ixon > /dev/null 2>/dev/null
