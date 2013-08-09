@@ -1,5 +1,5 @@
-"Sets nice colorscheme
-colorscheme slate
+"Color scheme
+colorscheme distinguished
 "Associate *.md with markdown filetype
 au BufRead,BufNewFile *.md setf markdown
 "Starts the syntax
@@ -14,12 +14,8 @@ set expandtab
 set number
 "Shows the found search results
 set showmatch
-"Shows 256 colors
-set t_Co=256
 "Shows the current line (where is the cursor at the moment)
 set cursorline
-"Highlights the current line in a better way
-highlight CursorLine term=none cterm=none ctermbg=0xcccccc
 "Stops vim from behaving like a strong vi compatible
 set nocompatible
 "Highlights all search matches
@@ -31,7 +27,7 @@ set showmode
 "Shows the current file at the title bar
 set title
 "Sets better color for search highlight
-hi Search cterm=NONE ctermfg=NONE ctermbg=DarkBlue
+"hi Search cterm=NONE ctermfg=NONE ctermbg=DarkBlue
 "Setting spell checking on markdown and text files
 au BufRead,BufNewFile *.md set spell
 au BufRead,BufNewFile *.txt set spell
@@ -145,3 +141,7 @@ endfunc
 
 nnoremap <C-x> :call NumberToggle()<cr>
 silent !stty -ixon > /dev/null 2>/dev/null
+
+vmap <C-x> :!pbcopy<CR>  
+vmap <C-c> :w !pbcopy<CR><CR> 
+let &t_Co=256
