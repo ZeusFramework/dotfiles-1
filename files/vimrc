@@ -146,5 +146,8 @@ vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR> 
 let &t_Co=256
 
-set foldmethod=syntax
+"Maps Command + t for the type of the variable
+nnoremap ;t :TernType<CR>
 
+"Maps Command+r to rename of variable
+nnoremap ;r :TernRename<CR>
