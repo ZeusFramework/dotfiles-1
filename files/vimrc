@@ -145,3 +145,6 @@ silent !stty -ixon > /dev/null 2>/dev/null
 vmap <C-x> :!pbcopy<CR>  
 vmap <C-c> :w !pbcopy<CR><CR> 
 let &t_Co=256
+
+set foldmethod=syntax
+
