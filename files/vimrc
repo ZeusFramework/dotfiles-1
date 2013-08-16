@@ -151,3 +151,5 @@ nnoremap ;t :TernType<CR>
 
 "Maps Command+r to rename of variable
 nnoremap ;r :TernRename<CR>
+
+noremap gf :CommandT<CR>
