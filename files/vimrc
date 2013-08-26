@@ -6,12 +6,17 @@ au BufRead,BufNewFile *.md setf markdown
 syntax on
 "Sets smart indent
 set smartindent
+"Incremental search
+set incsearch
 "Sets 4 spaces on tab
 set tabstop=4
 set shiftwidth=4
 set expandtab
 "Shows the lines number
 set number
+"Maps C-c and C-v to the "global clipboard"
+vmap <C-C> "+yi
+imap <C-V> <esc>"+gPi
 "Shows the found search results
 set showmatch
 "Shows the current line (where is the cursor at the moment)
@@ -153,3 +158,16 @@ nnoremap ;t :TernType<CR>
 nnoremap ;r :TernRename<CR>
 
 noremap gf :CommandT<CR>
+
+
+" Автозавершение слов по tab =)
+function! InsertTabWrapper()
+     let col = col('.') - 1
+     if !col || getline('.')[col - 1] !~ '\k'
+         return "\<tab>"
+     else
+         return "\<c-p>"
+     endif
+endfunction
+
+imap <tab> <c-r>=InsertTabWrapper()<cr>
