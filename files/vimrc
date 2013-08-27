@@ -136,15 +136,6 @@ let g:tagbar_type_javascript = {
     \ 'ctagsbin' : 'jsctags'
 \ }
 
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <C-x> :call NumberToggle()<cr>
 silent !stty -ixon > /dev/null 2>/dev/null
 
 vmap <C-x> :!pbcopy<CR>  
@@ -158,16 +149,3 @@ nnoremap ;t :TernType<CR>
 nnoremap ;r :TernRename<CR>
 
 noremap gf :CommandT<CR>
-
-
-" Автозавершение слов по tab =)
-function! InsertTabWrapper()
-     let col = col('.') - 1
-     if !col || getline('.')[col - 1] !~ '\k'
-         return "\<tab>"
-     else
-         return "\<c-p>"
-     endif
-endfunction
-
-imap <tab> <c-r>=InsertTabWrapper()<cr>
