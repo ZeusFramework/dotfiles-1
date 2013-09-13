@@ -157,3 +157,6 @@ nnoremap ;t :TernType<CR>
 nnoremap ;r :TernRename<CR>
 
 noremap gf :CommandT<CR>
+
+"Remove the scrollbar
+set guioptions-=L
