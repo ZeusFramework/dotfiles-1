@@ -36,8 +36,10 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Make tabs as wide as two spaces
+" Use spaces
 set tabstop=2
+set shiftwidth=2
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
