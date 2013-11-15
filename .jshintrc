@@ -17,5 +17,11 @@
   "white": true,
   "maxlen": 80,
   "freeze": true,
-  "immed": true
+  "immed": true,
+  "noempty": true,
+  "plusplus": true,
+  "maxdepth": 3,
+  "maxparams": 4,
+  "maxstatements": 5,
+  "loopfunc": true
 }
