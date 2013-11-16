@@ -22,6 +22,5 @@
   "plusplus": true,
   "maxdepth": 3,
   "maxparams": 4,
-  "maxstatements": 5,
   "loopfunc": true
 }
