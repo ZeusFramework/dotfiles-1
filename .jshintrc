@@ -20,6 +20,6 @@
   "noempty": true,
   "plusplus": true,
   "maxdepth": 3,
-  "maxparams": 5,
+  "maxparams": 4,
   "loopfunc": true
 }
