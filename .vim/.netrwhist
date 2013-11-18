@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/mgechev/Projects/Math-BrowniePoints-WebApp/app'
 let g:netrw_dirhist_2='/Users/mgechev/Projects/Math-BrowniePoints-WebApp/app/styles'
 let g:netrw_dirhist_3='/Users/mgechev/Projects/Math-BrowniePoints-WebApp/app/scripts/app'
+let g:netrw_dirhist_4='/Users/mgechev/public'
+let g:netrw_dirhist_5='/Users/mgechev/Projects/trainings/jquery-jquery-mobile'
+let g:netrw_dirhist_6='/Users/mgechev/Projects/perfect-scrollbar/src'

@@ -1,3 +1,3 @@
 [ -n "$PS1" ] && source ~/.bash_profile
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:/Users/mgechev/Library/aspectj1.7/lib/aspectjrt.jar:/Users/mgechev/Library/aspectj1.7/bin
