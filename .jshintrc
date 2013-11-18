@@ -15,7 +15,6 @@
   "trailing": true,
   "smarttabs": true,
   "white": true,
-  "maxlen": 80,
   "freeze": true,
   "immed": true,
   "noempty": true,
