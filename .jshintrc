@@ -26,6 +26,7 @@
     "$": false,
     "jQuery": false,
     "document": false,
-    "window": false
+    "window": false,
+    "console": false
   }
 }
