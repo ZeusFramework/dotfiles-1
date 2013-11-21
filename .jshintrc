@@ -4,7 +4,6 @@
   "camelcase": true,
   "curly": true,
   "eqeqeq": true,
-  "immed": true,
   "indent": 2,
   "latedef": true,
   "noarg": true,
@@ -19,8 +18,9 @@
   "immed": true,
   "noempty": true,
   "plusplus": true,
+  "undef": true,
+  "laxbreak": true,
   "maxdepth": 3,
-  "maxparams": 4,
   "loopfunc": true,
   "globals": {
     "$": false,
