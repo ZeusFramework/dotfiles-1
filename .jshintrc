@@ -23,10 +23,8 @@
   "maxdepth": 3,
   "loopfunc": true,
   "globals": {
-    "$": false,
-    "jQuery": false,
     "document": false,
     "window": false,
-    "console": false
+    "console": false,
   }
 }
