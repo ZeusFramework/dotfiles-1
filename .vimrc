@@ -86,3 +86,6 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" Start NERDTree automatically
+NERDTree
