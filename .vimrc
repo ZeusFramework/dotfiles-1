@@ -88,4 +88,10 @@ if has("autocmd")
 endif
 
 " Start NERDTree automatically
-NERDTree
+autocmd VimEnter * NERDTree
+
+" Disable arrows
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
