@@ -39,3 +39,5 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH='/Users/mgechev/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mgechev/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:/Users/mgechev/Development/android/sdk/tools/:/Users/mgechev/Development/android/sdk/platform-tools/'
