@@ -43,3 +43,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 export PATH='/Users/mgechev/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mgechev/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:/Users/mgechev/Development/android/sdk/tools/:/Users/mgechev/Development/android/sdk/platform-tools/'
 
 export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
+
+
+export DATABASE_URL=postgres://postgres@localhost/store_buttons
