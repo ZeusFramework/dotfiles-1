@@ -22,8 +22,8 @@ sudo pmset -a standbydelay 86400
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# Menu bar: enable transparency
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Use suck as default minimization effect
 defaults write com.apple.dock mineffect suck

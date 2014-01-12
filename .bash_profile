@@ -46,3 +46,5 @@ export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/
 
 
 export DATABASE_URL=postgres://postgres@localhost/store_buttons
+
+export ANDROID_HOME=/Users/mgechev/Development/android/sdk
