@@ -285,3 +285,13 @@ function o() {
 		open "$@"
 	fi
 }
+
+function defVars() {
+  if [ -e ".vars" ]; then
+    for def in $(cat ".vars"); do
+      varname=$(echo $def | cut -d '=' -f 1)
+      varval=$(echo $def | cut -d '=' -f 2)
+      export $varname=$varval
+    done
+  fi
+}

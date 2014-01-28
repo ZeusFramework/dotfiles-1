@@ -489,8 +489,8 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 # Spotlight                                                                   #
 ###############################################################################
 
-# Disable spotlight
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+# Enable spotlight
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 
 # Remove spotlight icon
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
