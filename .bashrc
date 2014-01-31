@@ -2,5 +2,7 @@
 
 PATH=$PATH:$HOME/.rvm/bin:/Users/mgechev/Library/aspectj1.7/lib/aspectjrt.jar:/Users/mgechev/Library/aspectj1.7/bin
 
+eval "$(direnv hook bash)"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
