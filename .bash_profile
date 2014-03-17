@@ -40,13 +40,14 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export PATH='/Users/mgechev/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mgechev/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:/Users/mgechev/Development/android/sdk/tools/:/Users/mgechev/Development/android/sdk/platform-tools/'
 
 export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
 
-
 export DATABASE_URL=postgres://postgres@localhost/store_buttons
 
 export ANDROID_HOME=/Users/mgechev/Development/android/sdk
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+rvm use 2.0.0 &> /dev/null
