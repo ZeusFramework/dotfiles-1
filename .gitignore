@@ -5,4 +5,5 @@ dist
 app/bower_components
 .DS_Store
 .bash_history
-.swp
+*.swp
+*.swo
