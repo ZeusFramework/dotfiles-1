@@ -89,3 +89,6 @@ endif
 
 " Start NERDTree automatically
 autocmd VimEnter * NERDTree
+
+" Set molokai as color scheme
+colorscheme molokai

@@ -51,3 +51,5 @@ export ANDROID_HOME=/Users/mgechev/Development/android/sdk
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 rvm use 2.0.0 &> /dev/null
+
+[ -s "/Users/mgechev/.nvm/nvm.sh" ] && . "/Users/mgechev/.nvm/nvm.sh" # This loads nvm
