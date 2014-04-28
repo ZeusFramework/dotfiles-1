@@ -7,3 +7,10 @@ app/bower_components
 .bash_history
 *.swp
 *.swo
+
+*.classpath
+*.project
+*.settings/
+*.classpath
+*.project
+*.settings/
