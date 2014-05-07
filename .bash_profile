@@ -54,4 +54,5 @@ rvm use 2.0.0 &> /dev/null
 
 [ -s "/Users/mgechev/.nvm/nvm.sh" ] && . "/Users/mgechev/.nvm/nvm.sh" # This loads nvm
 
+# Syntax highlighting
 alias ccat='pygmentize -g'
