@@ -1,3 +1,5 @@
+" Pathogen
+execute pathogen#infect()
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -86,9 +88,9 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
-
 " Start NERDTree automatically
 autocmd VimEnter * NERDTree
-
 " Set molokai as color scheme
 colorscheme molokai
+" Emmet
+let g:user_emmet_leader_key=';;'
