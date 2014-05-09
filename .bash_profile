@@ -44,8 +44,6 @@ export PATH='/Users/mgechev/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/ge
 
 export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
 
-export DATABASE_URL=postgres://postgres@localhost/store_buttons
-
 export ANDROID_HOME=/Users/mgechev/Development/android/sdk
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
