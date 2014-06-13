@@ -95,3 +95,5 @@ colorscheme molokai
 " Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+" Toggle NERDTree
+nnoremap <C-e> :NERDTreeToggle<CR>
