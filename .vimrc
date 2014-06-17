@@ -1,3 +1,5 @@
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 " Pathogen
 execute pathogen#infect()
 " Make Vim more useful
@@ -25,8 +27,10 @@ set noeol
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+  set undodir=~/.vim/undo
 endif
+
+Bundle "marijnh/tern_for_vim"
 
 " Respect modeline in files
 set modeline
@@ -97,3 +101,6 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " Toggle NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
+
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
