@@ -44,6 +44,7 @@ set number
 syntax on
 " Use spaces
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 " Show “invisible” characters
@@ -101,6 +102,5 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " Toggle NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
-
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
