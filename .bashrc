@@ -6,3 +6,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 eval "$(direnv hook bash)"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export GOPATH="$HOME/Projects/"
