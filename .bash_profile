@@ -54,3 +54,12 @@ rvm use 2.0.0 &> /dev/null
 
 # Syntax highlighting
 alias ccat='pygmentize -g'
+
+##
+# Your previous /Users/mgechev/.bash_profile file was backed up as /Users/mgechev/.bash_profile.macports-saved_2014-09-12_at_16:26:30
+##
+
+# MacPorts Installer addition on 2014-09-12_at_16:26:30: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
