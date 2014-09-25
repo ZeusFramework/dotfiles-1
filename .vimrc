@@ -109,3 +109,4 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Wrap into quotes
 vmap <C-z> c''<esc>P
+vmap <C-Z> c""<esc>P
