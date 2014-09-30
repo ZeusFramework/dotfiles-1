@@ -88,6 +88,8 @@ noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Automatic commands
 if has("autocmd")
+  " Enable filetype plugin
+  filetype plugin on
   " Enable file type detection
   filetype on
   " Treat .json files as .js
@@ -108,5 +110,4 @@ imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Wrap into quotes
-vmap <C-z> c''<esc>P
-vmap <C-Z> c""<esc>P
+vmap <C-f> c''<esc>P
