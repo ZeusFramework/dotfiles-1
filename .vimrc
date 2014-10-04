@@ -1,5 +1,3 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 " Pathogen
 execute pathogen#infect()
 " Make Vim more useful
@@ -29,8 +27,6 @@ set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
-
-Bundle "marijnh/tern_for_vim"
 
 " Respect modeline in files
 set modeline
@@ -89,7 +85,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Automatic commands
 if has("autocmd")
   " Enable filetype plugin
-  filetype plugin on
+  " filetype plugin on
   " Enable file type detection
   filetype on
   " Treat .json files as .js
