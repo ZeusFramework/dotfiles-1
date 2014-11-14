@@ -298,3 +298,4 @@ function hr {
   done
   echo "$GREEN${line:0:$columns}$RESET"
 }
+
