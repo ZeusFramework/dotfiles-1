@@ -1,10 +1,10 @@
 " Pathogen
 execute pathogen#infect()
+" Enhance command-line completion
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
-" Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
@@ -107,3 +107,9 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Wrap into quotes
 vmap <C-f> c''<esc>P
+
+nnoremap <C-j> :m .+1<CR>
+nnoremap <C-k> :m .-2<CR>
+
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv

@@ -13,3 +13,4 @@ app/bower_components
 *.classpath
 *.project
 *.settings/
+.vim/swaps/
