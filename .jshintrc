@@ -1,4 +1,7 @@
 {
+  "browser": true,
+  "jquery": true,
+  "node": true,
   "esnext": true,
   "bitwise": true,
   "camelcase": true,
