@@ -96,8 +96,8 @@ if has("autocmd")
   autocmd VimEnter * NERDTree
   autocmd FileType html,css EmmetInstall
 endif
-" Set molokai as color scheme
-colorscheme molokai
+" Set minko as color scheme
+colorscheme minko
 " Emmet
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
@@ -113,3 +113,10 @@ nnoremap <C-k> :m .-2<CR>
 
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
