@@ -117,3 +117,5 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
