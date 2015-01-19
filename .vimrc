@@ -1,5 +1,27 @@
-" Pathogen
-execute pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Install vundle
+Plugin 'gmarik/Vundle.vim'
+" Add syntastic
+Plugin 'scrooloose/syntastic'
+" Add emmet
+Plugin 'mattn/emmet-vim'
+" Add React syntax
+Plugin 'mxw/vim-jsx'
+" Add vim-surround
+Plugin 'tpope/vim-surround'
+" Add autocompletion
+Plugin 'Valloric/YouCompleteMe'
+" Add NERDTree
+Plugin 'scrooloose/nerdtree'
+" Add tern
+Plugin 'marijnh/tern_for_vim'
+" Add awesome color scheme
+Bundle 'mgechev/stylish'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 " Enhance command-line completion
 " Make Vim more useful
 set nocompatible
@@ -96,14 +118,12 @@ if has("autocmd")
   autocmd VimEnter * NERDTree
   autocmd FileType html,css EmmetInstall
 endif
-" Set minko as color scheme
-colorscheme minko
+" Set stylish as color scheme
+colorscheme stylish
 " Emmet
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
 
 nnoremap <C-j> :m .+1<CR>
 nnoremap <C-k> :m .-2<CR>
@@ -119,3 +139,8 @@ if &term =~ '256color'
 endif
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+
+imap <Tab> <C-P>
