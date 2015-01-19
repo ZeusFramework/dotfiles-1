@@ -1,8 +1,20 @@
-# ctrlp.vim
-Fuzzy __file__, __buffer__, __mru__, __tag__, ... finder for Vim.
+To install vundle:
 
-* [**Project's homepage**][1]
-* [**Main git repository**][2]
+```bash
+cd ~/.vim/bundle && git clone https://github.com/gmarik/Vundle.vim
+```
 
-[1]: http://kien.github.com/ctrlp.vim
-[2]: https://github.com/kien/ctrlp.vim
+after that:
+
+```
+vim +PluginInstall +qall
+```
+
+To install YouCompleteMe:
+
+```
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.sh --clang-completer
+```
