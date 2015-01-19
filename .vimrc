@@ -144,3 +144,10 @@ let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 imap <Tab> <C-P>
+
+" Emmet uses spaces instead of tabs
+let g:user_emmet_settings = {
+\  'html' : {
+\    'indentation' : '  '
+\  }
+\}
