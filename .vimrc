@@ -17,6 +17,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 " Add tern
 Plugin 'marijnh/tern_for_vim'
+" Add MatchTagAlways
+Plugin 'valloric/MatchTagAlways'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
 call vundle#end()            " required
