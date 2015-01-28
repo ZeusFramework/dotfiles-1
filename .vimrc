@@ -95,6 +95,10 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Convert var definition
+function! ToggleVar()
+endfunction
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
   let save_cursor = getpos(".")
@@ -153,3 +157,6 @@ let g:user_emmet_settings = {
 \    'indentation' : '  '
 \  }
 \}
+
+" Change the var declaration from multiline to single line
+noremap <leader>v $r;^hhrrhrahrv
