@@ -19,6 +19,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'marijnh/tern_for_vim'
 " Add MatchTagAlways
 Plugin 'valloric/MatchTagAlways'
+" Add coffeescript syntax
+Plugin 'kchmck/vim-coffee-script'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
 call vundle#end()            " required
@@ -130,6 +132,8 @@ colorscheme stylish
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
 
 nnoremap <C-j> :m .+1<CR>
 nnoremap <C-k> :m .-2<CR>
