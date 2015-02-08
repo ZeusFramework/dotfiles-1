@@ -21,6 +21,8 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'valloric/MatchTagAlways'
 " Add coffeescript syntax
 Plugin 'kchmck/vim-coffee-script'
+" Add editorconfig plugin
+Plugin 'editorconfig/editorconfig-vim'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
 call vundle#end()            " required
