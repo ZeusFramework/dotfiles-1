@@ -53,7 +53,12 @@ set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
-
+" Set spaces indentation
+function Indent(n)
+  let &tabstop=a:n
+  let &shiftwidth=a:n
+  let &softtabstop=a:n
+endfunction
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -64,10 +69,8 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Use spaces
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+" Use 2 spaces by default
+call Indent(2)
 set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -97,10 +100,6 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Convert var definition
-function! ToggleVar()
-endfunction
-
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
   let save_cursor = getpos(".")
@@ -121,10 +120,13 @@ if has("autocmd")
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Treat .md files as .markdown
-  autocmd BufNewFile,BufRead *.md setfiletype markdown
+  autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
   autocmd VimEnter * NERDTree
+  " Enable emmet for JavaScript and CSS files
   autocmd FileType html,css EmmetInstall
+  " Indentation for CSS files
+  autocmd BufNewFile,BufRead *.css,*.py call Indent(4)
 endif
 " Set stylish as color scheme
 colorscheme stylish
