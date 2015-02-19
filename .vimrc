@@ -25,6 +25,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'editorconfig/editorconfig-vim'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
+" Add instant markdown viewer
+Bundle 'suan/vim-instant-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
