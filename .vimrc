@@ -123,6 +123,9 @@ if has("autocmd")
   filetype on
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Set appropriate linters
+  autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_checkers = ['jsxhint', 'jsxcs']
+  autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint', 'jscs']
   " Treat .md files as .markdown
   autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
@@ -156,7 +159,6 @@ endif
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 imap <Tab> <C-P>
