@@ -8,7 +8,7 @@ Plugin 'scrooloose/syntastic'
 " Add emmet
 Plugin 'mattn/emmet-vim'
 " Add React syntax
-Plugin 'mxw/vim-jsx'
+Plugin 'mgechev/vim-jsx'
 " Add vim-surround
 Plugin 'tpope/vim-surround'
 " Add autocompletion
