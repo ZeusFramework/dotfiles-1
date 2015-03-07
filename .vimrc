@@ -122,7 +122,8 @@ if has("autocmd")
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Set appropriate linters
-  autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_checkers = ['jsxhint', 'jsxcs']
+  autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jshint_exec = 'jsxhint'
+  autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jscs_exec = 'jsxcs'
   autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint', 'jscs']
   " Treat .md files as .markdown
   autocmd BufNewFile,BufRead *.md set syntax=markdown
