@@ -313,3 +313,7 @@ function gt() {
 function hl() {
   highlight -O rtf -s rdark $1 | pbcopy
 }
+
+function rsw() {
+  rm ~/.vim/swaps/*
+}
