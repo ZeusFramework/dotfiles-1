@@ -58,7 +58,7 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 " Set spaces indentation
-function Indent(n)
+function SetIndent(n)
   let &tabstop=a:n
   let &shiftwidth=a:n
   let &softtabstop=a:n
@@ -74,7 +74,7 @@ set number
 " Enable syntax highlighting
 syntax on
 " Use 2 spaces by default
-call Indent(2)
+call SetIndent(2)
 set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -134,7 +134,7 @@ if has("autocmd")
   " Enable emmet for JavaScript and CSS files
   autocmd FileType html,css EmmetInstall
   " Indentation for CSS files
-  autocmd BufNewFile,BufRead *.css,*.py call Indent(4)
+  autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
 endif
 " Set stylish as color scheme
 colorscheme stylish
