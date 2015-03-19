@@ -145,11 +145,11 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
-nnoremap <C-j> :m .+1<CR>
-nnoremap <C-k> :m .-2<CR>
+nnoremap <S-j> :m .+1<CR>
+nnoremap <S-k> :m .-2<CR>
 
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
