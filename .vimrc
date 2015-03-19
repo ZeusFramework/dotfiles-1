@@ -25,6 +25,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'editorconfig/editorconfig-vim'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
+" Better integration with tmux
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
