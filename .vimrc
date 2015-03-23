@@ -152,9 +152,6 @@ vnoremap <S-k> :m '<-2<CR>gv=gv
 
 " To spell check all git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
-" Underline misspelled words
-hi clear SpellBad
-hi SpellBad cterm=underline
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
