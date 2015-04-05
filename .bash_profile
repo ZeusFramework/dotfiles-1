@@ -63,5 +63,3 @@ alias ccat='pygmentize -g'
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-
-source /Users/mgechev/.iterm2_shell_integration.bash
