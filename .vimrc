@@ -27,6 +27,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Bundle 'mgechev/stylish'
 " Better integration with tmux
 Plugin 'christoomey/vim-tmux-navigator'
+" TypeScript support
+Bundle 'clausreinke/typescript-tools.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
