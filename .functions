@@ -317,3 +317,7 @@ function hl() {
 function rsw() {
   rm ~/.vim/swaps/*
 }
+
+function icat() {
+  ccat $1 | less -R
+}
