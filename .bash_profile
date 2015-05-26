@@ -1,8 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
-
-export EDITOR=subl
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -63,5 +58,15 @@ alias ccat='pygmentize -g'
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-export GOPATH=/Users/mgechev/Development/go
 export PATH=$GOPATH/bin:$PATH
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH"
+export PATH=$PATH:/usr/local/git/bin
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/usr/texbin:$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/git/bin
+export GOPATH="$HOME/Projects/"
+
+
