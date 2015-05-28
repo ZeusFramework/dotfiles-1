@@ -31,6 +31,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'clausreinke/typescript-tools.vim'
 " Add go support
 Plugin 'fatih/vim-go'
+" Add TypeScript
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
