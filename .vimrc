@@ -185,3 +185,5 @@ let g:user_emmet_settings = {
 
 " Change the var declaration from multiline to single line
 noremap <leader>v $r;^hhrrhrahrv
+" Autoformat
+noremap <F3> :Autoformat<CR>
