@@ -33,6 +33,8 @@ Bundle 'clausreinke/typescript-tools.vim'
 Plugin 'fatih/vim-go'
 " Add TypeScript
 Plugin 'leafgarland/typescript-vim'
+" Add auto formatter
+Plugin 'Chiel92/vim-autoformat'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
