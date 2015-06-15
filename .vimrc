@@ -37,6 +37,8 @@ Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 " Add auto formatter
 Plugin 'Chiel92/vim-autoformat'
+" Add ctrl+p
+Plugin 'kien/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
