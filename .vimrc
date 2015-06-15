@@ -25,6 +25,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'editorconfig/editorconfig-vim'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
+" Add Seti_UI color scheme
+Plugin 'trusktr/seti.vim'
 " Better integration with tmux
 Plugin 'christoomey/vim-tmux-navigator'
 " TypeScript support
