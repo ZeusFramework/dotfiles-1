@@ -174,7 +174,9 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+set laststatus=2
+set t_Co=256"
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
