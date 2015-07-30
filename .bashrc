@@ -6,3 +6,6 @@ if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline
     source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
+
+export NVM_DIR="/Users/mgechev/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

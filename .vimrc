@@ -137,6 +137,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
   autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
+  autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
   " Set appropriate linters
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jshint_exec = 'jsxhint'
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jscs_exec = 'jsxcs'
