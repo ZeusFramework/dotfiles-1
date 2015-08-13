@@ -107,6 +107,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
+# Merge conflict
+alias gm='git mergetool -t gvimdiff'
+
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
