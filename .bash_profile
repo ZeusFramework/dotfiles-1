@@ -1,7 +1,7 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{path,bash_prompt,exports,aliases,custom_aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -46,9 +46,6 @@ export ANDROID_HOME=/Users/mgechev/Development/android/sdk
 rvm use 2.0.0 &> /dev/null
 
 [ -s "/Users/mgechev/.nvm/nvm.sh" ] && . "/Users/mgechev/.nvm/nvm.sh" # This loads nvm
-
-# Syntax highlighting
-alias ccat='pygmentize -g'
 
 ##
 # Your previous /Users/mgechev/.bash_profile file was backed up as /Users/mgechev/.bash_profile.macports-saved_2014-09-12_at_16:26:30
