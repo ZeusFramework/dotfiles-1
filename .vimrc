@@ -39,7 +39,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Chiel92/vim-autoformat'
 " Add ctrl+p
 Plugin 'kien/ctrlp.vim'
-" Add goyo for distraction free coding
+" Add Goyo for distraction free coding
 Plugin 'junegunn/goyo.vim'
 " Add limelight for better Goyo experience
 Plugin 'junegunn/limelight.vim'
