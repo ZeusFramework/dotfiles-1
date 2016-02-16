@@ -1,3 +1,4 @@
+execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -29,8 +30,6 @@ Bundle 'mgechev/stylish'
 Plugin 'trusktr/seti.vim'
 " Better integration with tmux
 Plugin 'christoomey/vim-tmux-navigator'
-" TypeScript support
-Bundle 'clausreinke/typescript-tools.vim'
 " Add go support
 Plugin 'fatih/vim-go'
 " Add TypeScript
@@ -43,6 +42,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'junegunn/goyo.vim'
 " Add limelight for better Goyo experience
 Plugin 'junegunn/limelight.vim'
+" Tools
+Plugin 'Shougo/vimproc.vim'
+" Supertab
+Plugin 'ervandew/supertab.git'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -198,4 +201,5 @@ let g:user_emmet_settings = {
 noremap <leader>v $r;^hhrrhrahrv
 " Autoformat
 noremap <F3> :Autoformat<CR>
-
+" Add neocompletecache
+let g:neocomplcache_enable_at_startup = 1

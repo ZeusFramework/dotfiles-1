@@ -70,3 +70,12 @@ export DARTIUM_BIN="/usr/local/opt/dart/Chromium.app"
 export DART_SDK="/usr/local/opt/dart/libexec"
 export PATH="$PATH:$DART_SDK/bin"
 export PATH=/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/local/heroku/bin:/Users/mgechev/bin:/bin:/opt/local/bin:/opt/local/sbin:/Users/mgechev/.rvm/gems/ruby-2.0.0-p576/bin:/Users/mgechev/.rvm/gems/ruby-2.0.0-p576@global/bin:/Users/mgechev/.rvm/rubies/ruby-2.0.0-p576/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin:/Users/mgechev/Development/android/sdk/tools:/Users/mgechev/Development/android/sdk/platform-tools/:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/usr/local/git/bin:/Users/mgechev/.rvm/bin:/usr/local/git/bin:/usr/local/opt/dart/libexec/bin
+
+export PATH="$HOME/.node/bin:$PATH"
+export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4/"
+
+###-tns-completion-start-###
+if [ -f /Users/mgechev/.tnsrc ]; then
+    source /Users/mgechev/.tnsrc
+fi
+###-tns-completion-end-###
