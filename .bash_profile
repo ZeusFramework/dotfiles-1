@@ -73,6 +73,8 @@ export PATH=/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/l
 
 export PATH="$HOME/.node/bin:$PATH"
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4/"
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
 
 ###-tns-completion-start-###
 if [ -f /Users/mgechev/.tnsrc ]; then
