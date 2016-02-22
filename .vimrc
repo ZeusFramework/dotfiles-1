@@ -1,3 +1,52 @@
+" NeoBundle
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+ set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+call neobundle#begin()
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
+NeoBundle 'Quramy/tsuquyomi'
+call neobundle#end()
+
+" TypeScript plugin
+autocmd FileType typescript setlocal completeopt+=menu,preview
+let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
+
 execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -159,7 +208,9 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
 endif
 " Set stylish as color scheme
-colorscheme stylish
+syntax enable
+set background=dark
+colorscheme solarized
 " Emmet
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
@@ -188,7 +239,7 @@ set t_Co=256"
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
-imap <Tab> <C-P>
+" imap <Tab> <C-P>
 
 " Emmet uses spaces instead of tabs
 let g:user_emmet_settings = {
@@ -201,5 +252,3 @@ let g:user_emmet_settings = {
 noremap <leader>v $r;^hhrrhrahrv
 " Autoformat
 noremap <F3> :Autoformat<CR>
-" Add neocompletecache
-let g:neocomplcache_enable_at_startup = 1
