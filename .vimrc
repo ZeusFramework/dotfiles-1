@@ -46,6 +46,7 @@ call neobundle#end()
 " TypeScript plugin
 autocmd FileType typescript setlocal completeopt+=menu,preview
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
+let g:syntastic_typescript_tsc_fname = ''
 
 execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
