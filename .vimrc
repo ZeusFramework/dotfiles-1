@@ -48,6 +48,10 @@ autocmd FileType typescript setlocal completeopt+=menu,preview
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 let g:syntastic_typescript_tsc_fname = ''
 
+call plug#begin()
+Plug 'scwood/vim-hybrid'
+call plug#end()
+
 execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -55,15 +59,13 @@ call vundle#begin()
 " Install vundle
 Plugin 'gmarik/Vundle.vim'
 " Add syntastic
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 " Add emmet
 Plugin 'mattn/emmet-vim'
 " Add React syntax
 Plugin 'mgechev/vim-jsx'
 " Add vim-surround
 Plugin 'tpope/vim-surround'
-" Add autocompletion
-Plugin 'Valloric/YouCompleteMe'
 " Add NERDTree
 Plugin 'scrooloose/nerdtree'
 " Add tern
@@ -96,6 +98,8 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'Shougo/vimproc.vim'
 " Supertab
 Plugin 'ervandew/supertab.git'
+" Switch Splits
+Plugin 'wesQ3/vim-windowswap'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -211,7 +215,7 @@ endif
 " Set stylish as color scheme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 " Emmet
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
@@ -253,3 +257,7 @@ let g:user_emmet_settings = {
 noremap <leader>v $r;^hhrrhrahrv
 " Autoformat
 noremap <F3> :Autoformat<CR>
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240

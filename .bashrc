@@ -71,7 +71,10 @@ fi
 ###-end-npm-completion-###
 
 ###-tns-completion-start-###
-if [ -f /Users/mgechev/.tnsrc ]; then 
-    source /Users/mgechev/.tnsrc 
+if [ -f /Users/mgechev/.tnsrc ]; then
+    source /Users/mgechev/.tnsrc
 fi
 ###-tns-completion-end-###
+
+# Jump
+eval "$(jump shell bash)"
