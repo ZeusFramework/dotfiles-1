@@ -56,6 +56,8 @@ execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Install julia
+Plugin 'JuliaLang/julia-vim'
 " Install vundle
 Plugin 'gmarik/Vundle.vim'
 " Add syntastic
@@ -203,6 +205,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jshint_exec = 'jsxhint'
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jscs_exec = 'jsxcs'
   autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+  autocmd BufNewFile,BufRead *.ts let g:syntastic_typescript_checkers = ['tslint']
   " Treat .md files as .markdown
   autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
@@ -215,7 +218,7 @@ endif
 " Set stylish as color scheme
 syntax enable
 set background=dark
-colorscheme gruvbox
+colorscheme tomorrow-night
 " Emmet
 let g:user_emmet_install_global = 0
 " Toggle NERDTree
