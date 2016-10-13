@@ -7,10 +7,11 @@ call vundle#begin()
 Plugin 'JuliaLang/julia-vim'
 " Install vundle
 Plugin 'gmarik/Vundle.vim'
-" Add syntastic
-" Plugin 'scrooloose/syntastic'
 " Add emmet
 Plugin 'mattn/emmet-vim'
+" Add airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Add React syntax
 Plugin 'mgechev/vim-jsx'
 " Add vim-surround
@@ -30,13 +31,15 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Add go support
 Plugin 'fatih/vim-go'
 " Add TypeScript
-Plugin 'leafgarland/typescript-vim'
+" Plugin 'leafgarland/typescript-vim'
 " Add auto formatter
 Plugin 'Chiel92/vim-autoformat'
 " Add Goyo for distraction free coding
 Plugin 'junegunn/goyo.vim'
 " Add limelight for better Goyo experience
 Plugin 'junegunn/limelight.vim'
+" Install neomake
+Plugin 'neomake/neomake'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -68,7 +71,7 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 " Set spaces indentation
-function SetIndent(n)
+function! SetIndent(n)
   let &tabstop=a:n
   let &shiftwidth=a:n
   let &softtabstop=a:n
@@ -138,8 +141,8 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
   autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
   autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
-  " Set appropriate linters
-  " Treat .md files as .markdown
+  autocmd! BufWritePost,BufEnter * Neomake
+  autocmd BufNewFile,BufRead * echo 12
   autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
   autocmd VimEnter * NERDTree
@@ -197,8 +200,33 @@ noremap <F3> :Autoformat<CR>
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
-" Powerline
-set rtp+=/usr/local/lib/python3.5/site-packages/powerline/bindings/vim/
-set laststatus=2
-set t_Co=256
+" Configure airline
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
