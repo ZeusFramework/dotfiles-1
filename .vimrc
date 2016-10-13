@@ -1,56 +1,7 @@
-" NeoBundle
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
-if &compatible
- set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath^=~/.vim/bundle/neobundle.vim/
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-call neobundle#begin()
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-
-NeoBundle 'Quramy/tsuquyomi'
-call neobundle#end()
-
 " TypeScript plugin
 autocmd FileType typescript setlocal completeopt+=menu,preview
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 let g:syntastic_typescript_tsc_fname = ''
-
-call plug#begin()
-Plug 'scwood/vim-hybrid'
-call plug#end()
 
 execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
@@ -61,7 +12,7 @@ Plugin 'JuliaLang/julia-vim'
 " Install vundle
 Plugin 'gmarik/Vundle.vim'
 " Add syntastic
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Add emmet
 Plugin 'mattn/emmet-vim'
 " Add React syntax
@@ -70,14 +21,10 @@ Plugin 'mgechev/vim-jsx'
 Plugin 'tpope/vim-surround'
 " Add NERDTree
 Plugin 'scrooloose/nerdtree'
-" Add tern
-Plugin 'marijnh/tern_for_vim'
 " Add MatchTagAlways
 Plugin 'valloric/MatchTagAlways'
 " Add coffeescript syntax
 Plugin 'kchmck/vim-coffee-script'
-" Add editorconfig plugin
-Plugin 'editorconfig/editorconfig-vim'
 " Add awesome color scheme
 Bundle 'mgechev/stylish'
 " Add Seti_UI color scheme
@@ -90,18 +37,10 @@ Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 " Add auto formatter
 Plugin 'Chiel92/vim-autoformat'
-" Add ctrl+p
-Plugin 'kien/ctrlp.vim'
 " Add Goyo for distraction free coding
 Plugin 'junegunn/goyo.vim'
 " Add limelight for better Goyo experience
 Plugin 'junegunn/limelight.vim'
-" Tools
-Plugin 'Shougo/vimproc.vim'
-" Supertab
-Plugin 'ervandew/supertab.git'
-" Switch Splits
-Plugin 'wesQ3/vim-windowswap'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -154,6 +93,8 @@ set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
+" Scroll 8 lines at a time
+set scrolljump=8
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -205,7 +146,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jshint_exec = 'jsxhint'
   autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_jscs_exec = 'jsxcs'
   autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint', 'jscs']
-  autocmd BufNewFile,BufRead *.ts let g:syntastic_typescript_checkers = ['tslint']
+  " autocmd BufNewFile,BufRead *.ts let g:syntastic_typescript_checkers = ['tslint']
   " Treat .md files as .markdown
   autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
