@@ -16,7 +16,7 @@ alias gc="git commit -am"
 alias gp="git push origin"
 alias h="history"
 # alias j="jobs"
-alias vim="/usr/local/bin/vim --cmd 'let g:powerline_config_overrides={\"common\":{\"log_file\":\"/tmp/powerline.log\"}}'"
+alias vim="nvim"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
