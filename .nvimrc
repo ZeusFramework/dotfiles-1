@@ -142,7 +142,6 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
   autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
   autocmd! BufWritePost,BufEnter * Neomake
-  autocmd BufNewFile,BufRead * echo 12
   autocmd BufNewFile,BufRead *.md set syntax=markdown
   " Start NERDTree automatically
   autocmd VimEnter * NERDTree

@@ -35,20 +35,20 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
-export PATH='/Users/mgechev/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mgechev/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:/Users/mgechev/Development/android/sdk/tools/:/Users/mgechev/Development/android/sdk/platform-tools/'
+export PATH='~/.rvm/gems/ruby-1.9.2-p320/bin:~/.rvm/gems/ruby-1.9.2-p320@global/bin:~/.rvm/rubies/ruby-1.9.2-p320/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:~/Development/android/sdk/tools/:~/Development/android/sdk/platform-tools/'
 
 export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools
 
-export ANDROID_HOME=/Users/mgechev/Development/android/sdk
+export ANDROID_HOME=~/Development/android/sdk
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 rvm use 2.0.0 &> /dev/null
 
-[ -s "/Users/mgechev/.nvm/nvm.sh" ] && . "/Users/mgechev/.nvm/nvm.sh" # This loads nvm
+[ -s "~/.nvm/nvm.sh" ] && . "~/.nvm/nvm.sh" # This loads nvm
 
 ##
-# Your previous /Users/mgechev/.bash_profile file was backed up as /Users/mgechev/.bash_profile.macports-saved_2014-09-12_at_16:26:30
+# Your previous ~/.bash_profile file was backed up as ~/.bash_profile.macports-saved_2014-09-12_at_16:26:30
 ##
 
 # MacPorts Installer addition on 2014-09-12_at_16:26:30: adding an appropriate PATH variable for use with MacPorts.
@@ -69,7 +69,7 @@ export GOPATH="$HOME/Projects/"
 export DARTIUM_BIN="/usr/local/opt/dart/Chromium.app"
 export DART_SDK="/usr/local/opt/dart/libexec"
 export PATH="$PATH:$DART_SDK/bin"
-export PATH=/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/local/heroku/bin:/Users/mgechev/bin:/bin:/opt/local/bin:/opt/local/sbin:/Users/mgechev/.rvm/gems/ruby-2.0.0-p576/bin:/Users/mgechev/.rvm/gems/ruby-2.0.0-p576@global/bin:/Users/mgechev/.rvm/rubies/ruby-2.0.0-p576/bin:/Users/mgechev/.rvm/bin:/Users/mgechev/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin:/Users/mgechev/Development/android/sdk/tools:/Users/mgechev/Development/android/sdk/platform-tools/:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/usr/local/git/bin:/Users/mgechev/.rvm/bin:/usr/local/git/bin:/usr/local/opt/dart/libexec/bin:/Applications/Julia-0.6.app/Contents/Resources/julia/bin
+export PATH=/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/local/heroku/bin:~/bin:/bin:/opt/local/bin:/opt/local/sbin:~/.rvm/gems/ruby-2.0.0-p576/bin:~/.rvm/gems/ruby-2.0.0-p576@global/bin:~/.rvm/rubies/ruby-2.0.0-p576/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin:~/Development/android/sdk/tools:~/Development/android/sdk/platform-tools/:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/usr/local/git/bin:~/.rvm/bin:/usr/local/git/bin:/usr/local/opt/dart/libexec/bin:/Applications/Julia-0.6.app/Contents/Resources/julia/bin
 
 export PATH="$HOME/.node/bin:$PATH"
 
@@ -79,8 +79,8 @@ export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 
 ###-tns-completion-start-###
-if [ -f /Users/mgechev/.tnsrc ]; then
-    source /Users/mgechev/.tnsrc
+if [ -f ~/.tnsrc ]; then
+    source ~/.tnsrc
 fi
 ###-tns-completion-end-###
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

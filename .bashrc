@@ -7,11 +7,11 @@ if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline
 fi
 
 
-export NVM_DIR="/Users/mgechev/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # added by travis gem
-[ -f /Users/mgechev/.travis/travis.sh ] && source /Users/mgechev/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -71,8 +71,8 @@ fi
 ###-end-npm-completion-###
 
 ###-tns-completion-start-###
-if [ -f /Users/mgechev/.tnsrc ]; then
-    source /Users/mgechev/.tnsrc
+if [ -f ~/.tnsrc ]; then
+    source ~/.tnsrc
 fi
 ###-tns-completion-end-###
 
