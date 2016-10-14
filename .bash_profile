@@ -41,6 +41,9 @@ export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/
 
 export ANDROID_HOME=~/Development/android/sdk
 
+# Fix for neovim and C+h
+export TERMINFO="$HOME/.terminfo"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 rvm use 2.0.0 &> /dev/null
