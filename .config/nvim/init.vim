@@ -1,43 +1,56 @@
 execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.config/nvim/bundle
-call vundle#begin()
-" Install julia
-Plugin 'JuliaLang/julia-vim'
-" Install vundle
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'VundleVim/Vundle.vim'
 " Add syntastic
-" Plugin 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 " Add emmet
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " Add React syntax
-Plugin 'mgechev/vim-jsx'
+Plug 'mgechev/vim-jsx'
 " Add vim-surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " Add NERDTree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " Add MatchTagAlways
-Plugin 'valloric/MatchTagAlways'
+Plug 'valloric/MatchTagAlways'
 " Add coffeescript syntax
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 " Add awesome color scheme
-Bundle 'mgechev/stylish'
+Plug 'mgechev/stylish'
 " Add Seti_UI color scheme
-Plugin 'trusktr/seti.vim'
+Plug 'trusktr/seti.vim'
 " Better integration with tmux
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 " Add go support
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 " Add TypeScript
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 " Add auto formatter
-Plugin 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat'
 " Add Goyo for distraction free coding
-Plugin 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 " Add limelight for better Goyo experience
-Plugin 'junegunn/limelight.vim'
-call vundle#end()            " required
+Plug 'junegunn/limelight.vim'
+" Add airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug
+Plug 'Shougo/deoplete.nvim'
+Plug 'mhartington/deoplete-typescript'
+Plug 'neomake/neomake'
+call plug#end()
+
+" Enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
+
 filetype plugin indent on    " required
 
 " Enhance command-line completion
@@ -147,6 +160,9 @@ if has("autocmd")
   autocmd FileType html,css EmmetInstall
   " Indentation for CSS files
   autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
+  " Neomake
+  autocmd BufWritePost,BufEnter * Neomake
+  autocmd InsertChange * update | Neomake
 endif
 " Set stylish as color scheme
 syntax enable
@@ -198,7 +214,21 @@ let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
 " Powerline
-set rtp+=/usr/local/lib/python3.5/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+" neomake config
+let g:neomake_verbose = 1
+let g:neomake_place_signs = 1
+let g:neomake_echo_current_error=1
+let g:neomake_open_list=0
+let g:neomake_logfile='/tmp/neomake-error.log'
+let g:neomake_warning_sign={'text': '⚠', 'texthl': 'NeomakeErrorMsg'}
+let g:neomake_error_sign={'text': '✘', 'texthl': 'NeomakeErrorMsg'}
 
