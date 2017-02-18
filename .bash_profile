@@ -88,3 +88,6 @@ fi
 ###-tns-completion-end-###
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
+    PATH="$HOME/Library/Python/2.7/bin:$PATH"
+fi

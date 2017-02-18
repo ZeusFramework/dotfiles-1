@@ -76,5 +76,3 @@ if [ -f ~/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
-# Jump
-eval "$(jump shell bash)"
