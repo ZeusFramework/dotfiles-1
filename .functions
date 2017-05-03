@@ -112,7 +112,10 @@ function server() {
 # Start a PHP server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
 function phpserver() {
-  local port="8081"
+  local port=$1 #"8081"
+  if [[ $port == "" ]]; then
+    port="8081"
+  fi
   local ip=$"0.0.0.0"
   sleep 1 && open "http://${ip}:${port}/" &
   php -S "${ip}:${port}"
@@ -324,4 +327,9 @@ function rsw() {
 
 function icat() {
   ccat $1 | less -R
+}
+
+function ghcontrib() {
+  repo=$(basename $(pwd))
+  githubcontrib --owner mgechev --repo $repo --cols 6 --showlogin true --sortOrder desc | pbcopy
 }
