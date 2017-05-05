@@ -331,5 +331,5 @@ function icat() {
 
 function ghcontrib() {
   repo=$(basename $(pwd))
-  githubcontrib --owner mgechev --repo $repo --cols 6 --showlogin true --sortOrder desc | pbcopy
+  githubcontrib --owner mgechev --repo $repo --cols 6 --showlogin true --filter gitter-badger --sortOrder desc | pbcopy
 }
